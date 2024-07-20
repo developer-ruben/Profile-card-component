@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Profile card component</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <main>
+      <h1 class="sr-only">Frontend Mentor | Profile card component</h1>
+
+      <article class="card">
+        <img
+          class="card__image"
+          src="./images/bg-pattern-card.svg"
+          width="350"
+          height="140"
+          alt=""
+        />
+        <div class="card__content">
+          <img class="card__avatar" src="./images/image-victor.jpg" alt="" />
+          <h2 class="card__title">
+            Victor Crest <span class="card__age">26</span>
+          </h2>
+          <span class="card__location">London</span>
+        </div>
+        <footer class="card__footer">
+          <div class="card__item">
+            <span class="card__number">80K</span>
+            <span class="card__category">Followers</span>
+          </div>
+          <div class="card__item">
+            <span class="card__number">803K</span>
+            <span class="card__category">Likes</span>
+          </div>
+          <div class="card__item">
+            <span class="card__number">1.4K</span>
+            <span class="card__category">Photos</span>
+          </div>
+        </footer>
+      </article>
+    </main>
+
+    <footer class="attribution">
+      <p>
+        Challenge by
+        <a
+          class="attribution__link"
+          href="https://www.frontendmentor.io?ref=challenge"
+          target="_blank"
+          >Frontend Mentor</a
+        >. Coded by
+        <a
+          class="attribution__link"
+          href="https://rubendeman.nl"
+          target="_blank"
+          >Ruben de Man</a
+        >.
+      </p>
+    </footer>
+  </body>
+</html>
