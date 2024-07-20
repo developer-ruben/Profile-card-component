@@ -147,12 +147,12 @@ body::after {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.9rem;
+  gap: 0.5rem;
 }
 
 .card__number {
   font-size: 1.8rem;
-  font-weight: 700;
+  font-weight: 600;
   display: block;
 }
 
