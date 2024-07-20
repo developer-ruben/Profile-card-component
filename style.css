@@ -141,6 +141,7 @@ body::after {
   display: flex;
   justify-content: space-around;
   align-content: center;
+  padding: 2rem;
 }
 
 .card__item {
