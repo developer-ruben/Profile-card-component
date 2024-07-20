@@ -2,12 +2,11 @@
 
 :root {
   --clr-dark-cyan: 185, 75%, 39%;
+  --clr-very-dark-cyan: 197, 84%, 20%;
   --clr-very-dark-desaturated-blue: 229, 23%, 23%;
   --clr-dark-grayish-blue: 227, 10%, 46%;
-
   --clr-dark-gray: 0, 0%, 59%;
   --clr-light-gray: 225, 10%, 92%;
-
   --clr-white: 0, 0%, 100%;
 }
 
@@ -95,6 +94,7 @@ body::after {
   border-radius: 1.5rem;
   overflow: hidden;
   text-align: center;
+  box-shadow: 0 50px 100px -20 hsl(var(--clr-very-dark-cyan), 0.5048);
 }
 
 .card__image {
