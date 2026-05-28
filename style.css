@@ -1,0 +1,210 @@
+/* VARIABLES */
+
+:root {
+  --clr-blue-600: 185, 75%, 39%;
+  --clr-navy-950: 229, 23%, 23%;
+  --clr-gray-500: 227, 10%, 46%;
+
+  --clr-gray-100: 225, 10%, 92%;
+
+  --clr-white: 0, 0%, 100%;
+
+  --text-preset-1-size: 1.125rem;
+  --text-preset-1-height: 1.25;
+
+  --text-preset-2-size: 0.875rem;
+  --text-preset-2-height: 1.25;
+
+  --text-preset-3-size: 0.625rem;
+  --text-preset-3-height: 1.25;
+  --text-preset-3-ls: 0.09375rem;
+
+  --spacing-0: 0;
+  --spacing-100: 0.5rem;
+  --spacing-200: 1rem;
+  --spacing-300: 1.5rem;
+  --spacing-400: 2rem;
+  --spacing-500: 2.5rem;
+  --spacing-600: 3rem;
+  --spacing-700: 3.5rem;
+  --spacing-1000: 5rem;
+}
+
+/* GENERAL */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  background-image:
+    url("./images/bg-pattern-top.svg"), url("./images/bg-pattern-bottom.svg");
+  background-position:
+    top -509px left -285px,
+    bottom -632px right -230px;
+  background-repeat: no-repeat;
+  background-color: hsl(var(--clr-blue-600));
+
+  padding: var(--spacing-300);
+  min-height: 100vh;
+  color: hsl(var(--clr-gray-500));
+  font-weight: 500;
+  font-family: "Kumbh Sans", sans-serif;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+p {
+  font-size: var(--text-preset-2-size);
+  line-height: var(--text-preset-2-height);
+}
+
+button {
+  font: inherit;
+}
+
+/* UTILITY */
+
+.sr-only {
+  position: absolute;
+  margin: -1px;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+  white-space: nowrap; /* prevents line breaks */
+}
+
+/* PROFILE CARD */
+
+.profile-card {
+  box-shadow: 0 50px 100px 0 hsl(var(--clr-navy-950), 0.25);
+  border-radius: 0.9375rem;
+  background-color: hsl(var(--clr-white));
+  overflow: hidden;
+}
+
+.profile-card__cover {
+  display: block;
+}
+
+.profile-card__avatar {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0 auto;
+  border: 5px solid hsl(var(--clr-white));
+  border-radius: 50%;
+}
+
+.profile-card__header {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  gap: var(--spacing-100);
+  border-bottom: 1px solid hsl(var(--clr-gray-100));
+  padding: 4rem 0 var(--spacing-300) 0;
+  text-align: center;
+}
+
+.profile-card__title {
+  color: hsl(var(--clr-navy-950));
+  font-size: var(--text-preset-1-size);
+  line-height: var(--text-preset-1-height);
+}
+
+.profile-card__age {
+  color: hsl(var(--clr-gray-500));
+  font-weight: 400;
+}
+
+.profile-card__location {
+  font-size: var(--text-preset-2-size);
+  line-height: var(--text-preset-2-height);
+}
+
+.profile-card__list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--spacing-700);
+  padding: var(--spacing-300) 0;
+  list-style-type: none;
+}
+
+.profile-card__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-100);
+  font-size: var(--text-preset-3-size);
+  line-height: var(--text-preset-3-height);
+  letter-spacing: var(--text-preset-3-ls);
+}
+
+.profile-card__item-number {
+  color: hsl(var(--clr-navy-950));
+  font-weight: 700;
+  font-size: var(--text-preset-1-size);
+  line-height: var(--text-preset-1-height);
+}
+
+/* ATTRIBUTION */
+
+.attribution {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border-top-right-radius: var(--spacing-100);
+  background-color: hsl(var(--clr-white));
+  padding: var(--spacing-100);
+}
+
+.attribution__link {
+  transition: color 0.3s ease-in-out;
+  color: hsl(var(--clr-blue-600));
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.attribution__link:hover {
+  text-decoration: underline;
+}
+
+/* MEDIA QUERIES */
+
+@media only screen and (max-width: 25rem) {
+  body {
+    background-position:
+      top -355px left -410px,
+      bottom -386px right -540px;
+    background-size:
+      622px 621px,
+      622px 621px;
+  }
+  .attribution {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  /* stop most animations/transitions for users who asked for reduced motion */
+  * {
+    animation: none !important; /* remove animations */
+    transition: none !important; /* remove transitions */
+  }
+}
